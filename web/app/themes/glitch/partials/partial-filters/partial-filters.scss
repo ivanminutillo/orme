@@ -1,0 +1,165 @@
+
+.filters {
+  background-color: rgba(0,0,0,.4);
+  border-radius: 10px;
+  padding: 20px;
+  .filters_categories {
+    border-bottom: 1px solid rgba(255,255,255, .2);
+    margin-right: -20px;
+    margin-left: -20px;
+    .categories_list {
+      list-style: none;
+      margin: 0;
+      display: inline-block;
+      padding: 0;
+      margin-bottom: 20px;
+      padding-left: 20px;
+      .list_item {
+        display: inline-block;
+        margin-right: 20px;
+        @include interface_text(white);
+        text-align: center;
+        text-transform: uppercase;
+        width: 80px;
+        height: 80px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+        &.active {
+          background-color: $primary;
+          border-radius: 3px;
+        }
+        .item_icon {
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 10px;
+          margin-top: 15px;
+          font-size: 25px;
+        }
+      }
+    }
+    .categories_button {
+      float: right;
+      color: white;
+      padding-right: 20px;
+      font-size: 13px;
+      text-decoration: none;
+      padding-top: 20px;
+    }
+  }
+  .form_container {
+    width: 320px;
+    display: inline-block;
+    span {
+     @include interface_text(white);
+    }
+  }
+  form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    select {
+      display: inline;
+      margin-right: 20px;
+      width: 300px;
+      border: 1px solid $primary;
+      background-color: transparent;
+      color: white;
+      border-radius: 0;
+      height: 40px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+    .form_button {
+      @include button(white, $secondary);
+      background-color: $secondary;
+    }
+  }
+}
+
+.partial_filters {
+  background-color: rgba(255, 255, 255, .9);
+  position: absolute;
+  top: -80px;
+  width: 100%;
+  z-index: $z2;
+  display: none;
+  opacity: 0;
+  box-shadow: 0px 5px 9px -7px #333;
+  @include transition(.3s);
+  &.visible {
+    display: block;
+    opacity: 1;
+    top: 80px;
+    @include transition(.3s);
+  }
+  .filters {
+    border-radius: 0;
+    background-color: transparent;
+    .filters_categories {
+      .categories_button {
+        @include interface-text($dark-gray);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        @include transition(.3s);
+        &:hover {
+          color: $secondary;
+          @include transition(.3s);
+          .icon-arrow-right {
+            @include transition(.3s);
+            @include scale(1.1);
+            &:before {
+              color: $secondary;
+            }
+            &:after {
+              background-color: $secondary;
+            }
+          }
+        }
+      }
+      .icon-arrow-right {
+        position: relative;
+        display: block;
+        &:after {
+          position: absolute;
+          content: "";
+          width: 160px;
+          height: 1px;
+          background-color: #000;
+          left: -10px;
+          top: 6px;
+        }
+        &:before {
+          position: absolute;
+          left: 141px;
+          color: #000;
+          font-size: 13px;
+          top: 0px;
+        }
+      }
+      .categories_list {
+        .list_item {
+          color: $dark-gray;
+          &.active {
+            color: white;
+          }
+        }
+      }
+    }
+    .form_container {
+      span {
+        color: $dark-gray;
+      }
+    }
+    form {
+      select {
+        color: $dark-gray;
+      }
+    }
+  }
+}
+

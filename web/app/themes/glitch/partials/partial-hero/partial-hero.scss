@@ -1,0 +1,17 @@
+.slider_hero {
+  .partial_hero {
+    @include cover;    
+    .hero_title {
+      position: relative;
+      margin-top: 150px;
+      @include big_title(white);
+      font-family: $sans-serif;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 60px;
+    }
+    .hero_link {
+      @include button(white, $primary);
+    }
+  }
+}

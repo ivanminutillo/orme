@@ -1,0 +1,135 @@
+// Serif typography
+
+@mixin big_title($color) {
+  font-family: $serif;
+  font-size: $maxi-font-size;
+  font-weight: $regular;
+  line-height: $maxi-line-height;
+  letter-spacing: $regular-letter-spacing;
+  color: $color;
+}
+
+@mixin section_title($color) {
+  font-family: $serif;
+  font-size: $medium-font-size;
+  font-weight: $regular;
+  line-height: $medium-line-height;
+  letter-spacing: $mini-letter-spacing;
+  color: $color;
+}
+
+@mixin card_title($color) {
+  font-family: $serif;
+  font-size: $base-font-size;
+  font-weight: $regular;
+  line-height: $base-line-height;
+  letter-spacing: $mini-letter-spacing;
+  color: $color;
+}
+
+
+
+// Sans-serif typography
+
+@mixin link($color) {
+  font-family: $sans-serif;
+  font-size: $mini-font-size;
+  font-weight: $regular;
+  line-height: $regular-line-height;
+  letter-spacing: $regular-letter-spacing;
+  color: $color;
+  text-decoration: none;
+}
+
+
+@mixin button($color, $border) {
+  @include link($color);
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid $border;
+  position: relative;
+  @include border-radius(100px);
+  padding: 10px 40px; 
+  @include transition(.2s);
+  &:hover {
+    background-color: darken( $border, 20% );
+    border-color: darken( $border, 20% );
+    color: white;
+    @include scale(1.1);
+  }
+  &:after {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e607";
+    position: absolute;
+    right: 10px;
+    top: 13px;
+  }
+}
+
+
+@mixin interface-text($color) {
+  color: $color;
+  font-family: $sans-serif;
+  font-size: $mini-font-size;
+  font-weight: $regular;
+  line-height: $regular-line-height;
+  letter-spacing: $mini-letter-spacing;
+}
+
+@mixin article-text {
+  color: $dark-gray;
+  font-family: $sans-serif;
+  font-size: $regular-font-size;
+  font-weight: $regular;
+  line-height: $base-line-height;
+  letter-spacing: $regular-letter-spacing;
+}
+
+@mixin tag-card {
+  color: white;
+  font-family: $sans-serif;
+  font-style: italic;
+  font-size: $small-font-size;
+  font-weight: $regular;
+  line-height: $regular-line-height;
+}
+
+
+.content_text {
+  @include article-text;
+  p {
+    margin: 25px 0;
+  }
+  h1, h2, h3, h4 {
+    color: #948987;
+    font-family: $sans-serif;
+    font-weight: $regular;
+    margin: 50px 0;
+    line-height: $medium-line-height;
+  }
+  blockquote {
+    font-family: $sans-serif;
+    font-size: 35px;
+    font-weight: $bold;
+    line-height: 60px;
+    letter-spacing: $base-letter-spacing;
+    color: $dark-gray;
+    margin-left: -100px;
+    margin-right: -100px;
+  }
+  figure {
+    margin-left: -100px;
+    margin-right: -100px;
+    position: relative;
+  }
+}

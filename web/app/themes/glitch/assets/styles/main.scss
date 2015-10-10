@@ -1,0 +1,25 @@
+@import "common/_variables";
+
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+// endbower
+
+@import "common/_mixin";
+@import "common/_typography";
+@import "common/_general";
+@import "layouts/layouts";
+@import "widgets/widgets";
+
+// Include partials scss
+@import "../../partials/partial-hero/partial-hero";
+@import "../../partials/partial-main-categories/partial-main-categories";
+@import "../../partials/partial-cta/partial-cta";
+@import "../../partials/partial-main-experiences/partial-main-experiences";
+@import "../../partials/partial-text/partial-text";
+@import "../../partials/partial-hero-guide/partial-hero-guide";
+@import "../../partials/partial-guide/partial-guide";
+@import "../../partials/partial-guide-history/partial-guide-history";
+@import "../../partials/partial-guide-related/partial-guide-related";
+@import "../../partials/partial-filters/partial-filters";
+@import "../../partials/partial-feedback/partial-feedback";
+@import "../../partials/partial-tour/partial-tour";

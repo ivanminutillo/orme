@@ -1,0 +1,58 @@
+.all_categories {
+  .categories_title {
+    @include big_title($secondary);
+    margin-top: 100px;
+  }
+  .categories_description {
+    @include interface-text($dark-gray);
+  }
+}
+
+.categories_list {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+
+.single_category_description {
+  margin: 30px 0;
+  .description_title {
+    @include section_title($dark-gray);
+  }
+  .description_text {
+    @include interface-text($dark-gray);
+  }
+}
+
+.single_category_filter {
+  background-color: $beige;
+  padding: 20px 0;
+  .filter_form {
+    line-height: 100px;
+    select {
+      display: inline-block;
+      margin-right: 20px;
+      width: 270px;
+      border: 1px solid $primary;
+      background-color: transparent;
+      color: $dark-gray;
+      border-radius: 0;
+      height: 40px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+  }
+  .filter_button {
+    @include button(white, $secondary);
+    background-color: $secondary;
+    display: inline-block;
+  }
+}
+
+.single_category_experiences_list {
+  margin-top: 30px;
+}
+
+.guide_result_title {
+  @include big_title($secondary);
+}

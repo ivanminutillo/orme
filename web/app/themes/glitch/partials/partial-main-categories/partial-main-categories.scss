@@ -1,0 +1,20 @@
+.main_categories {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  .categories_title {
+    @include section_title($dark-gray);
+    text-align: center;
+  }
+  .categories_description {
+    text-align: center;
+    @include interface-text($dark-gray);
+    margin-bottom: 60px;
+  }
+  .categories_button {
+    @include button($dark-gray, $primary);
+    display: inline-block;
+    margin-top: 60px;
+  }
+}
+
+

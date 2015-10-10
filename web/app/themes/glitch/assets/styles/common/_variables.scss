@@ -1,0 +1,129 @@
+/*---------------------------------
+      TYPOGRAPHY
+----------------------------------*/
+$sans-serif: 'Open Sans', sans-serif;
+$serif: 'Noto Serif', serif;
+$base-font-family: $sans-serif;
+$heading-font-family: $base-font-family;
+
+
+/*---------------------------------
+      FONT WEIGHT
+----------------------------------*/
+$light : 200;
+$regular : 400;
+$semibold : 600;
+$bold : 700;
+
+/*---------------------------------
+      FONT SIZES
+----------------------------------*/
+$small-font-size: 11px;
+$mini-font-size: 14px;
+$regular-font-size: 16px;
+$base-font-size: 20px;
+$medium-font-size: 25px;
+//$mega-font-size: 28px;
+$maxi-font-size: 55px;
+
+
+/*---------------------------------
+      LINE HEIGHT
+----------------------------------*/
+
+$regular-line-height: 20px;
+$base-line-height: 30px;
+$medium-line-height: 40px;
+$maxi-line-height: 80px;
+
+
+/*---------------------------------
+      LETTER SPACING
+----------------------------------*/
+
+$mini-letter-spacing: 1px;
+$regular-letter-spacing: 2px;
+$base-letter-spacing: 3px;
+$medium-letter-spacing: 4px;
+$mega-letter-spacing: 5px;
+$maxi-letter-spacing: 10px;
+
+
+/*---------------------------------
+      OTHER SIZES
+----------------------------------*/
+$base-border-radius: 3px;
+$base-spacing: $base-line-height;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+/*---------------------------------
+      COLORS
+----------------------------------*/
+$primary: #FBAB35;
+$secondary: #A0D4A6;
+$beige: #F8F7F2;
+$light-primary: lighten( $primary, 20% );
+$lighter-primary: lighten( $primary, 40% );
+$lightest-primary: lighten( $primary, 60% );
+
+$light-secondary: lighten( $secondary, 20% );
+$lighter-secondary: lighten( $secondary, 40% );
+$lightest-secondary: lighten( $secondary, 60% );
+
+$dark-primary: darken( $primary, 20% );
+$darker-primary: darken( $primary, 40% );
+$darkest-primary: darken( $primary, 60% );
+
+$dark-secondary: darken( $secondary, 20% );
+$darker-secondary: darken( $secondary, 40% );
+$darkest-secondary: darken( $secondary, 60% );
+
+$gray: #DDDDDD;
+$light-gray: lighten( $gray, 20% );
+$dark-gray: #555555;
+
+
+$blue: #14415E;
+$light-blue: lighten( $blue, 20% );
+$dark-blue: darken( $blue, 20% );
+
+
+$yellow: #FFF700;
+$light-yellow: lighten( $yellow, 20% );
+$dark-yellow: darken( $yellow, 20% );
+
+$red: #CC1433;
+$light-red: lighten( $red, 20% );
+$dark-red: darken( $red, 20% );
+
+
+/*---------------------------------
+      PADDINGS & MARGINS
+----------------------------------*/
+$distance: 20px;
+
+
+/*---------------------------------
+      BOX DIMENSION
+----------------------------------*/
+
+$big-height: 600px;
+$medium-height: 500px;
+$small-height: 400px;
+$button-height: 30px;
+$header-height: 60px;
+$small-header-height: 40px;
+$footer-height: 150px;
+
+
+/*---------------------------------
+      Z INDEX
+----------------------------------*/
+
+$z1: 100;
+$z2: 200;
+$z3: 300;
+$z4: 400;
+$z5: 500;
+$zi: 10000000;

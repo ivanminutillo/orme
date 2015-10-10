@@ -1,0 +1,93 @@
+<?php 
+acf_add_local_field_group(array (
+'key' => 'group_55d9a9466a0de',
+'title' => 'Main Experiences',
+'fields' => array (
+  array (
+    'key' => 'field_55d9a96216e8c',
+    'label' => 'Title',
+    'name' => 'experience_title',
+    'type' => 'text',
+    'instructions' => '',
+    'required' => 0,
+    'conditional_logic' => 0,
+    'wrapper' => array (
+      'width' => '',
+      'class' => '',
+      'id' => '',
+    ),
+    'default_value' => 'Main experiences',
+    'placeholder' => 'Inserisci il titolo...',
+    'prepend' => '',
+    'append' => '',
+    'maxlength' => '',
+    'readonly' => 0,
+    'disabled' => 0,
+  ),
+  array (
+    'key' => 'field_55d9a98916e8d',
+    'label' => 'Tagline',
+    'name' => 'experience_tagline',
+    'type' => 'text',
+    'instructions' => '',
+    'required' => 0,
+    'conditional_logic' => 0,
+    'wrapper' => array (
+      'width' => '',
+      'class' => '',
+      'id' => '',
+    ),
+    'default_value' => '',
+    'placeholder' => 'Insert tagline...',
+    'prepend' => '',
+    'append' => '',
+    'maxlength' => '',
+    'readonly' => 0,
+    'disabled' => 0,
+  ),
+  array (
+    'key' => 'field_55d9a9a116e8e',
+    'label' => 'Experiences',
+    'name' => 'experiences',
+    'type' => 'relationship',
+    'instructions' => '',
+    'required' => 0,
+    'conditional_logic' => 0,
+    'wrapper' => array (
+      'width' => '',
+      'class' => '',
+      'id' => '',
+    ),
+    'post_type' => array (
+      0 => 'experience',
+    ),
+    'taxonomy' => array (
+    ),
+    'filters' => array (
+      0 => 'search',
+      1 => 'post_type',
+      2 => 'taxonomy',
+    ),
+    'elements' => '',
+    'min' => '',
+    'max' => '',
+    'return_format' => 'object',
+  ),
+),
+'location' => array (
+  array (
+    array (
+      'param' => 'page_template',
+      'operator' => '==',
+      'value' => 'template-homepage.php',
+    ),
+  ),
+),
+'menu_order' => 0,
+'position' => 'normal',
+'style' => 'default',
+'label_placement' => 'top',
+'instruction_placement' => 'label',
+'hide_on_screen' => '',
+  ));
+?>

@@ -1,0 +1,203 @@
+@mixin clearfix {
+  &:before, &:after {
+    content: " ";
+    display: table; }
+  &:after {
+    clear: both; }
+}
+
+@mixin transition($time) {
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -ms-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+  transition: all $time ease-in-out;
+}
+
+@mixin transition-opacity($time) {
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: opacity $time ease-in-out;
+  -moz-transition: opacity $time ease-in-out;
+  -ms-transition: opacity $time ease-in-out;
+  -o-transition: opacity $time ease-in-out;
+  transition: opacity $time ease-in-out;
+}
+
+@mixin delay($time) {
+  -webkit-transition-delay: $time;
+  -moz-transition-delay: $time;
+  -ms-transition-delay: $time;
+  -o-transition-delay: $time;
+  transition-delay: $time;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin circle {
+  @include border-radius(50%);
+  overflow: hidden;
+}
+
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset:"") {
+  -webkit-box-shadow:$top $left $blur $spread $color #{$inset};
+  -moz-box-shadow:$top $left $blur $spread $color #{$inset};
+  -ms-box-shadow:$top $left $blur $spread $color #{$inset};
+  -o-box-shadow:$top $left $blur $spread $color #{$inset};
+  box-shadow:$top $left $blur $spread $color #{$inset};
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+@mixin scale($scale) {
+  -webkit-transform: scale($scale);
+  -moz-transform: scale($scale);
+  -ms-transform: scale($scale);
+  -o-transform: scale($scale);
+  transform: scale($scale);
+}
+
+@mixin rotate-scale($deg, $scale) {
+  -webkit-transform: rotate($deg) scale($scale);
+  -moz-transform: rotate($deg) scale($scale);
+  -ms-transform: rotate($deg) scale($scale);
+  -o-transform: rotate($deg) scale($scale);
+  transform: rotate($deg) scale($scale);
+}
+
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
+
+@mixin cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+@mixin contain {
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+@mixin vertical-align-absolute {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+@mixin remove-vertical-align {
+  position: relative;
+  top: initial;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+@mixin content-box {
+  -webkit-background-clip: content; 
+  -moz-background-clip: content;
+  background-clip: content-box;
+}
+
+@mixin truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin arrow-right {
+  &:before {
+    font-family: "coop";
+    content: "\e607"!important;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    font-size: 20px;
+    margin-top: -10px;
+    color: $blue;
+    height: 20px;
+    line-height: 20px;
+    opacity: .5;
+    @include transition(.2s);
+  }
+  &:hover {
+    &:before {
+      right: 10px;
+      opacity: 1;
+    }
+  }
+}
+
+.gradient-black {
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+
+  }
+}
+
+
+.gradient-black-small {
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+
+  }
+}

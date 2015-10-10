@@ -1,0 +1,15 @@
+.cta {
+  @include cover;
+  .cta_content {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    .content_title {
+      @include big_title(white);
+      margin-bottom: 60px;
+    }
+    .content_button {
+      @include button(white, $primary);
+      display: inline-block;
+    }
+  }
+}
